@@ -88,7 +88,9 @@ def descargar_imagen(url: str, carpeta: str) -> None:
 # Corregido: Se declaró la firma de la función aceptando el parámetro enviado desde main
     
 if __name__ == "__main__":
-    
+    if len(sys.argv) < 2:    
+        print("Uso: script.py <IP/Rango/Dominio>")
+        sys.exit(1)
     ips = ips_del_rango(str(sys.argv[1]))
     for ip in ips:
         response = consulta_a_shodan(ip)
