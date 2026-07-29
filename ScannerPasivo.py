@@ -4,7 +4,6 @@ import re
 import sys
 from ipaddress import ip_network
 from bs4 import BeautifulSoup
-# Corregido: Se importó 'quote' desde 'urllib.parse' ya que se usa en 'consultar_leaks'
 from urllib.parse import quote
 import random
 import requests
